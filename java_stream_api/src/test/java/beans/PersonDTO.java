@@ -38,17 +38,4 @@ public class PersonDTO {
                 '}';
     }
 
-    public static PersonDTO map(Person person) {
-        return new PersonDTO(
-                person.getId(),
-                person.getFirstName(),
-                person.getAge());
-    }
-
-    public static PersonDTO map1(Person person) {
-        return new PersonDTO(
-                person.getAge()
-        );
-    }
-
 }
