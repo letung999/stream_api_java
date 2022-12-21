@@ -38,4 +38,12 @@ public class PersonDTO {
                 '}';
     }
 
+    public static PersonDTO map(Person person){
+        return new PersonDTO(
+                person.getId(),
+                person.getFirstName(),
+                person.getAge()
+        );
+    }
+
 }
