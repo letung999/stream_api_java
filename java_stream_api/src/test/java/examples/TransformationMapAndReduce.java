@@ -55,7 +55,7 @@ public class TransformationMapAndReduce {
     void findAverageAgePerson() throws IOException {
         List<Person> personList = MockData.getPerson();
         double averageAge = personList.stream()
-                .mapToDouble(person-> person.getAge())
+                .mapToDouble(person -> person.getAge())
                 .average()
                 .getAsDouble();
         System.out.println(averageAge);
