@@ -1,0 +1,27 @@
+[
+  {
+    "name": "steve",
+    "is_Manager": false,
+    "salary": 1000
+  },
+  {
+    "name": "Jon",
+    "is_Manager": false,
+    "salary": 1000
+  },
+  {
+    "name": "Mark",
+    "is_Manager": false,
+    "salary": 1000
+  },
+  {
+    "name": "Kevin",
+    "is_Manager": true,
+    "salary": 1000
+  },
+  {
+    "name": "Luna",
+    "is_Manager": true,
+    "salary": 1000000000000
+  }
+]
