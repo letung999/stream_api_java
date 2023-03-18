@@ -13,19 +13,17 @@ import java.util.stream.Collectors;
 public class Filtering {
     @Test
     void findCarByCondition() throws IOException {
-//        Predicate<Car> colorCondition = p -> p.getColor().equalsIgnoreCase("yellow");
-//        Predicate<Car> priceCondition = p -> p.getPrice() > 20000;
-//        Predicate<Car> yearCondition = p -> p.getYear() < 2016;
-//        List<Car> carList = MockData.getCar();
-//        List<Car> resultList = carList.stream()
-//                .filter(colorCondition)
-//                .filter(priceCondition)
-//                .filter(yearCondition)
-//                .limit(30)
-//                .collect(Collectors.toList());
-//        resultList.forEach(System.out::println);
-        List<Car> resultData = MockData.getData("cars.json", Car[].class);
-        resultData.forEach(System.out::println);
+        Predicate<Car> colorCondition = p -> p.getColor().equalsIgnoreCase("yellow");
+        Predicate<Car> priceCondition = p -> p.getPrice() > 20000;
+        Predicate<Car> yearCondition = p -> p.getYear() < 2016;
+        List<Car> carList = MockData.getCar();
+        List<Car> resultList = carList.stream()
+                .filter(colorCondition)
+                .filter(priceCondition)
+                .filter(yearCondition)
+                .limit(30)
+                .collect(Collectors.toList());
+        resultList.forEach(System.out::println);
     }
 
     /**
