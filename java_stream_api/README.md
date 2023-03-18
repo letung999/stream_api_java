@@ -1,5 +1,5 @@
 # Java Stream Api
-you will practice with stream api by examples , and how to implement  in project.
+you will practice with stream api by examples , and how to implement it in project.
 # Demo Description
  you will research about topics in stream api:
 ## List topic
