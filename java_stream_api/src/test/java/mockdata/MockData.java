@@ -1,6 +1,7 @@
 package mockdata;
 
 import beans.Car;
+import beans.Employee;
 import beans.Person;
 import com.google.common.io.Resources;
 import com.google.gson.Gson;
@@ -15,6 +16,7 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MockData {
@@ -34,5 +36,21 @@ public class MockData {
         }.getType();
         return new Gson().fromJson(json, typeList);
 
+    }
+
+    public static List<Employee> getEmployee() throws IOException {
+        InputStream inputStream = Resources.getResource("employees.json").openStream();
+        String json = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+        Type typeList = new TypeToken<ArrayList<Employee>>(){
+
+        }.getType();
+        return new Gson().fromJson(json, typeList);
+    }
+    // generic Method
+    public static <T> List<T> getData(String fileName, Class<T[]> object) throws IOException {
+        InputStream inputStream = Resources.getResource(fileName).openStream();
+        String json = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+        T[] result = new Gson().fromJson(json, object);
+        return Arrays.asList(result);
     }
 }
